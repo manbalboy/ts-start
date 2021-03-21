@@ -1,0 +1,7 @@
+{
+    "compilerOptions": {
+        "allowJs": true, //js 파일도 컴퍼일대상
+        "checkJs": true,
+        "noImplicitAny": true //암시적으로 선언되었는데 any 로 추론되면 에러를 알려줌
+    }
+}
