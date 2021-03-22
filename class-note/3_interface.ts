@@ -32,4 +32,21 @@ interface StringArray {
 var arr : StringArray =['a','b','c'];
 arr[0] = '100';
 
+//딕셔너리 패턴
+interface StringRegexDictionary {
+    [key : string] : RegExp;
+}
+
+let obj : StringRegexDictionary = {
+    sth : /abc/,
+}
+
+interface StringAnyDictionary {
+    [key : string] : any;
+}
+
+let obj2 : StringAnyDictionary = {
+    sth : 'fdsa',
+}
+
 
