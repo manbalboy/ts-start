@@ -49,4 +49,19 @@ let obj2 : StringAnyDictionary = {
     sth : 'fdsa',
 }
 
+interface Person  {
+    name : string; 
+    age : number;
+}
+
+
+interface Developer extends Person{
+    language:string;
+}
+
+let capt : Developer = {
+    language : 'ts',
+    age : 10,
+    name : 'd'
+}
 
