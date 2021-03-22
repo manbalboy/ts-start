@@ -15,3 +15,14 @@ function getUser(user : User) {
 }
 
 getUser({age : 12 , name:'d'});
+
+// 함수의 스펙(구조)에 인터페이스를 활용
+interface SumFunction {
+    (a: number, b:number):number;
+}
+
+var sum : SumFunction;
+
+sum = function (a:number, b:number) {
+    return a + b;
+}
