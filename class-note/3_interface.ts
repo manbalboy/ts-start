@@ -20,9 +20,16 @@ getUser({age : 12 , name:'d'});
 interface SumFunction {
     (a: number, b:number):number;
 }
-
-var sum : SumFunction;
-
+let sum : SumFunction;
 sum = function (a:number, b:number) {
     return a + b;
 }
+
+// 인덱싱
+interface StringArray {
+    [index:number]: string;
+}
+var arr : StringArray =['a','b','c'];
+arr[0] = '100';
+
+
