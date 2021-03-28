@@ -86,3 +86,19 @@ function lonTextLength2<T extends LengthType>(text: T): T {
 }
 
 lonTextLength2('hi');
+
+
+
+
+// 제너릭 타입제한 3
+interface ShoppingItem {
+    name: string;
+    price: number;
+    stock: number;
+}
+
+function getShoppingItemOption<T extends keyof ShoppingItem>(itemOption: T): T {
+    return itemOption;
+}
+
+getShoppingItemOption('price');
