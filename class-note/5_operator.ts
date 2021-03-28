@@ -26,5 +26,24 @@ interface Person {
 
 //유니온 타입은 인터페이스를 받을때 공통된 속성만 인지한다.
 function askSomeone(someone : Developer | Person) {
-    someone.name
+    someone.name;
+    // someone.age;
+    // someone.skill;
 }
+
+
+
+
+var seho : string | number | boolean;
+var capt : string & number &  boolean;
+
+
+//인터섹션 타입 
+function askSomeone2(someone : Developer & Person) {
+    someone.name;
+    someone.age;
+    someone.skill;
+}
+
+
+
