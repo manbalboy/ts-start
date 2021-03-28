@@ -49,7 +49,7 @@ logText4('10'); //문자열
 
 
 //
-function logText5<T>(text:T) :T {
+function logText5<T>(text: T): T {
     console.log(text);
     // text.split('').reverse().join();
     return text;
@@ -61,18 +61,27 @@ logText5<string>('10'); //문자열
 //interface 에 제너릭을 선언하는방법
 
 interface Dropdown {
-    value : string;
-    selected : boolean ;
+    value: string;
+    selected: boolean;
 }
 
 
-const obj : Dropdown = { value : 'abc' , selected: false };
+const obj: Dropdown = { value: 'abc', selected: false };
 
 
 
 interface Dropdown2<T> {
-    value : T;
-    selected : boolean ;
+    value: T;
+    selected: boolean;
 }
 
-const obj2 : Dropdown2<string> = { value : 'abc' , selected: false };
+const obj2: Dropdown2<string> = { value: 'abc', selected: false };
+
+// 제너릭의 타입제한
+function lonTextLength<T>(text: T[]): T[] {
+    console.log(text.length);
+    return text;
+}
+
+
+lonTextLength<string>(['hi']);
