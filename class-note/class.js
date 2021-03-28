@@ -15,3 +15,14 @@ class Person {
 var test = new Person('정훈', 33);
 
 console.log(test);
+
+
+
+//기존 레거시 클래스 코드
+function Person2(name, age) {
+    this.name = name;
+    this.age = age;
+}
+
+var test2 = new Person2('정훈', 3223);
+console.log(test2);
