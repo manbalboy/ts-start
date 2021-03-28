@@ -56,3 +56,23 @@ function logText5<T>(text:T) :T {
 }
 
 logText5<string>('10'); //문자열
+
+
+//interface 에 제너릭을 선언하는방법
+
+interface Dropdown {
+    value : string;
+    selected : boolean ;
+}
+
+
+const obj : Dropdown = { value : 'abc' , selected: false };
+
+
+
+interface Dropdown2<T> {
+    value : T;
+    selected : boolean ;
+}
+
+const obj2 : Dropdown2<string> = { value : 'abc' , selected: false };
