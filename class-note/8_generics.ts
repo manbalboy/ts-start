@@ -43,12 +43,6 @@ function logText4(text: number | string) {
 
 logText4('10'); //문자열
 
-
-
-
-
-
-//
 function logText5<T>(text: T): T {
     console.log(text);
     // text.split('').reverse().join();
@@ -57,7 +51,6 @@ function logText5<T>(text: T): T {
 
 logText5<string>('10'); //문자열
 
-
 //interface 에 제너릭을 선언하는방법
 
 interface Dropdown {
@@ -65,10 +58,7 @@ interface Dropdown {
     selected: boolean;
 }
 
-
 const obj: Dropdown = { value: 'abc', selected: false };
-
-
 
 interface Dropdown2<T> {
     value: T;
@@ -83,5 +73,16 @@ function lonTextLength<T>(text: T[]): T[] {
     return text;
 }
 
-
 lonTextLength<string>(['hi']);
+
+// 제너릭 타입 제한 2 - 정의된 타입 이용하기
+interface LengthType {
+    length: number;
+}
+
+function lonTextLength2<T extends LengthType>(text: T): T {
+    console.log(text.length);
+    return text;
+}
+
+lonTextLength2('hi');
